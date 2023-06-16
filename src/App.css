@@ -1,0 +1,21 @@
+main {
+    display: grid;
+    place-items: center;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section p {
+    padding: 20px;
+}
+
+section img {
+    width: 320px;
+    height: 320px;
+}
