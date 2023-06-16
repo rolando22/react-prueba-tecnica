@@ -7,7 +7,8 @@ main {
 }
 
 section {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     align-items: center;
 }
@@ -17,6 +18,6 @@ section p {
 }
 
 section img {
-    width: 320px;
+    width: 100%;
     height: 320px;
 }
