@@ -3,6 +3,7 @@ main {
     place-items: center;
     max-width: 760px;
     margin: 0 auto;
+    gap: 20px;
 }
 
 section {

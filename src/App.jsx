@@ -9,18 +9,18 @@ export function App() {
     const [fact, setFact] = useState('');
     const [imgUrl, setImgUrl] = useState('');
 
-    useEffect(() => {
-        const getRandomFact = async () => {
-            try {
-                const response = await fetch(CAT_ENDPOINT_RANDOM_FACT);
-                const json = await response.json();
-                const { fact } = json;
-                setFact(fact);
-            } catch (error) {
-                console.log(error);
-            }
-        };
+    const getRandomFact = async () => {
+        try {
+            const response = await fetch(CAT_ENDPOINT_RANDOM_FACT);
+            const json = await response.json();
+            const { fact } = json;
+            setFact(fact);
+        } catch (error) {
+            console.log(error);
+        }
+    };
 
+    useEffect(() => {
         getRandomFact();
     }, []);
 
@@ -33,12 +33,16 @@ export function App() {
                 const { url } = json;
                 setImgUrl(url);
             } catch (error) {
-                
+                console.log(error);
             }
         };
 
         getRandomImg();
     }, [fact]);
+
+    const handlerClick = () => {
+        getRandomFact();
+    };
 
     return (
         <main>
@@ -47,9 +51,10 @@ export function App() {
                 <p>{fact}</p>
                 <img 
                     src={`${CAT_ENDPOINT}${imgUrl}`} 
-                    alt={`Imagén obtenida de ${imgUrl} por hecho aleatorio`} 
+                    alt={`Imágen obtenida de ${imgUrl} por hecho aleatorio`} 
                 />
             </section>
+            <button onClick={handlerClick}>Obtener nueva imágen</button>
         </main>
     );
 }
