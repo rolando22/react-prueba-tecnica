@@ -1,12 +1,17 @@
 main {
     display: grid;
     place-items: center;
-    max-width: 760px;
+    width: 760px;
     margin: 0 auto;
+    padding: 20px 0;
     gap: 20px;
+    background-color: #b34f51;
+    border: 3px solid #ffb176;
+    border-radius: 5px;
 }
 
 section {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
@@ -14,10 +19,33 @@ section {
 }
 
 section p {
+    width: 90%;
+    justify-self: center;
     padding: 20px;
+    background-color: #f47763;
+    border: 3px solid #833544;
+    border-radius: 5px;
 }
 
 section img {
-    width: 100%;
+    width: 90%;
     height: 320px;
+    justify-self: center;
+    border: 3px solid #833544;
+    border-radius: 5px;
+}
+
+main button {
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    background-color: #ffb176;
+    border: 3px solid #833544;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+main button:hover {
+    background-color: #65273c;
 }
