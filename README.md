@@ -9,7 +9,7 @@ Este repositorio contiene el código de una aplicación para obtener un hecho al
 - Uso de customHooks para manejar los servicios encargados de realizar las peticiones en cada API y useState para manejar el estado en cada petición.
 - Test End-to-End con Playwright.
 
-Puedes ver el demo aquí: (https://rolando22.github.io/twitter-card/).
+Puedes ver el demo aquí: (https://rolando22.github.io/react-prueba-tecnica/).
 
 # Prueba técnica para Juniors y Trainees de React.
 
